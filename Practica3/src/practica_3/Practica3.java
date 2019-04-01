@@ -27,7 +27,7 @@ public class Practica3 {
         StringBuilder vocalO = new StringBuilder();
         StringBuilder vocalU = new StringBuilder();
         
-        
+        int a = 0,e = 0,i = 0,o = 0,u = 0;
         
         while(in.hasNext()) {
             sb.append(in.next());
@@ -40,22 +40,32 @@ public class Practica3 {
             switch (c) {
                 case 'a':
                     vocalA.append(c);
+                    a++;
                 break;
                 case 'e':
                     vocalE.append(c);
+                    e++;
                 break;
                 case 'i':
                     vocalI.append(c);
+                    i++;
                 break;
                 case 'o':
                     vocalO.append(c);
+                    o++;
                 break;
                 case 'u':
                     vocalU.append(c);
+                    u++;
                 break;
             }
         }
-        
+        System.out.println("a: " + a);
+        System.out.println("e: " + e);
+        System.out.println("i: " + i);
+        System.out.println("o: " + o);
+        System.out.println("u: " + u);
+        System.out.println("");
         System.out.println(vocalA);
         System.out.println(vocalE);
         System.out.println(vocalI);
