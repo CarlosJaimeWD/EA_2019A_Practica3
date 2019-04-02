@@ -18,7 +18,7 @@ public class Practica3 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
         Scanner in = new Scanner(new FileReader("input.txt"));
         StringBuilder sb = new StringBuilder();
         StringBuilder vocalA = new StringBuilder();
@@ -60,17 +60,20 @@ public class Practica3 {
                 break;
             }
         }
+        
+        BufferedWriter out = new BufferedWriter(new FileWriter("output.txt")); 
+        out.write(vocalA + "\n"); 
+        out.write(vocalE + "\n"); 
+        out.write(vocalI + "\n"); 
+        out.write(vocalO + "\n"); 
+        out.write(vocalU + "\n"); 
+        out.close();  
+        
         System.out.println("a: " + a);
         System.out.println("e: " + e);
         System.out.println("i: " + i);
         System.out.println("o: " + o);
         System.out.println("u: " + u);
-        System.out.println("");
-        System.out.println(vocalA);
-        System.out.println(vocalE);
-        System.out.println(vocalI);
-        System.out.println(vocalO);
-        System.out.println(vocalU);
     }
     
 }
